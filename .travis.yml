@@ -2,6 +2,8 @@ sudo: required
 services:
     - docker
 
+language: generic
+
 before_install:
     - docker build -t kevinzhang99/react-test -f ./client/Dockerfile.dev ./client
     
@@ -15,4 +17,4 @@ after_success:
     - docker build -t kevinzhang99/multi-worker ./worker
     # Log in the docker CLI
     
-    # Take the image and push them to docker hub
+    # Take the image and push them to docker hub .
